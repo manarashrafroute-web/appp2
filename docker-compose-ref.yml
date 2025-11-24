@@ -1,0 +1,32 @@
+version: "3"
+services:
+  node-app:
+   build: .
+   container_name : node-cont
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   ports :
+   - 4000:4000
+   environment :
+   - PORT=4000
+   - NODE_ENV=DEVLOPMENT
+  # env_file:
+  # - ./.env
+   volumes:
+    - ./src:/app/src:ro

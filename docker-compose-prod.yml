@@ -1,0 +1,19 @@
+version: "3"
+services:
+  node-app:
+#   build: .
+#   container_name : node-cont
+   build:
+    context: .
+    #args:
+    #- NODE_ENV=production 
+    target: production
+   ports :
+   - 4000:4000
+   environment :
+   - PORT=4000
+   - NODE_ENV=PRODUCTION
+  # env_file:
+  # - ./.env
+# عايزة اغير الكومند بتاع ال running لان انا  هنا في ال production هنعمل دا عن طريق 
+   command: ["npm" ,"run" ,"start"]
